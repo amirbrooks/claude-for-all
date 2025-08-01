@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "perplexity-ask": {
+      "command": "npx",
+      "args": ["-y", "server-perplexity-ask"],
+      "env": {
+        "PERPLEXITY_API_KEY": "$PERPLEXITY_API_KEY",
+        "PERPLEXITY_MODEL": "sonar-medium",
+        "PERPLEXITY_TIMEOUT": "30000",
+        "PERPLEXITY_CACHE": "true",
+        "PERPLEXITY_CACHE_TTL": "3600",
+        "DEBUG": "perplexity:*"
+      }
+    }
+  },
+  "aliases": {
+    "search": "perplexity-ask",
+    "web": "perplexity-ask",
+    "lookup": "perplexity-ask"
+  },
+  "defaultSearchSettings": {
+    "maxResults": 10,
+    "includeImages": false,
+    "safesearch": "moderate",
+    "language": "en",
+    "region": "us"
+  }
+}

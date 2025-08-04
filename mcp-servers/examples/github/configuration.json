@@ -1,0 +1,85 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "$GITHUB_TOKEN",
+        "GITHUB_API_URL": "https://api.github.com",
+        "GITHUB_USERNAME": "$GITHUB_USERNAME",
+        "GITHUB_DEFAULT_ORG": "$GITHUB_DEFAULT_ORG",
+        "GITHUB_DEFAULT_REPO": "$GITHUB_DEFAULT_REPO",
+        "GITHUB_PER_PAGE": "100",
+        "GITHUB_TIMEOUT": "30000",
+        "GITHUB_RETRY_COUNT": "3",
+        "GITHUB_RETRY_DELAY": "1000",
+        "GITHUB_CACHE_TTL": "300",
+        "GITHUB_USER_AGENT": "Claude-Code-MCP/1.0"
+      }
+    }
+  },
+  "githubAliases": {
+    "myrepo": "username/repository-name",
+    "work": "company-org/main-project",
+    "docs": "company-org/documentation"
+  },
+  "githubDefaults": {
+    "issue": {
+      "labels": ["needs-triage"],
+      "assignees": ["$GITHUB_USERNAME"]
+    },
+    "pullRequest": {
+      "draft": false,
+      "maintainerCanModify": true,
+      "labels": ["needs-review"]
+    },
+    "repository": {
+      "private": true,
+      "hasIssues": true,
+      "hasProjects": true,
+      "hasWiki": false,
+      "autoInit": true,
+      "gitignoreTemplate": "Node",
+      "licenseTemplate": "mit"
+    }
+  },
+  "githubWorkflows": {
+    "issueTemplates": {
+      "bug": {
+        "title": "🐛 [BUG] ",
+        "labels": ["bug", "needs-triage"],
+        "body": "## Description\\n\\n## Steps to Reproduce\\n\\n## Expected Behavior\\n\\n## Actual Behavior\\n\\n## Environment"
+      },
+      "feature": {
+        "title": "✨ [FEATURE] ",
+        "labels": ["enhancement", "needs-discussion"],
+        "body": "## Feature Description\\n\\n## Use Case\\n\\n## Proposed Solution\\n\\n## Alternatives Considered"
+      }
+    },
+    "prTemplates": {
+      "default": {
+        "body": "## Summary\\n\\n## Changes\\n- \\n\\n## Testing\\n- [ ] Unit tests pass\\n- [ ] Integration tests pass\\n\\n## Checklist\\n- [ ] Code follows style guidelines\\n- [ ] Self-review completed\\n- [ ] Documentation updated"
+      }
+    }
+  },
+  "githubAutomation": {
+    "autoLabel": {
+      "rules": [
+        {"pattern": "\\bfix\\b|\\bbug\\b", "labels": ["bug"]},
+        {"pattern": "\\bfeat\\b|\\bfeature\\b", "labels": ["enhancement"]},
+        {"pattern": "\\bdocs\\b|\\bdocumentation\\b", "labels": ["documentation"]},
+        {"pattern": "\\btest\\b|\\btesting\\b", "labels": ["testing"]},
+        {"pattern": "\\brefactor\\b", "labels": ["refactoring"]},
+        {"pattern": "\\bperf\\b|\\bperformance\\b", "labels": ["performance"]},
+        {"pattern": "\\bsecurity\\b|\\bvuln\\b", "labels": ["security"]}
+      ]
+    },
+    "sizeLabels": {
+      "XS": {"additions": 10, "deletions": 10},
+      "S": {"additions": 50, "deletions": 50},
+      "M": {"additions": 250, "deletions": 250},
+      "L": {"additions": 1000, "deletions": 1000},
+      "XL": {"additions": null, "deletions": null}
+    }
+  }
+}

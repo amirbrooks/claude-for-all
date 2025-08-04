@@ -1,0 +1,65 @@
+{
+  "name": "my-mcp-server",
+  "version": "1.0.0",
+  "description": "Custom MCP server for Claude Code",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "my-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "test": "node --test tests/",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write src/**/*.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "ai",
+    "assistant",
+    "server",
+    "tool"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/my-mcp-server"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/my-mcp-server/issues"
+  },
+  "homepage": "https://github.com/yourusername/my-mcp-server#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "nodemon": "^3.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0",
+    "lru-cache": "^10.0.0",
+    "winston": "^3.11.0"
+  }
+}

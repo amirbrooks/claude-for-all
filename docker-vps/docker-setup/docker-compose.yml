@@ -1,0 +1,112 @@
+version: '3.8'
+
+services:
+  # Main Claude Code service
+  claude:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: claude-code:latest
+    container_name: claude-code
+    
+    # Environment variables
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - PERPLEXITY_API_KEY=${PERPLEXITY_API_KEY:-}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+      - NODE_ENV=${NODE_ENV:-development}
+    
+    # Volumes for persistence and code access
+    volumes:
+      # Your code directory
+      - ./workspace:/home/claude/workspace
+      
+      # Claude configuration
+      - claude-config:/home/claude/.claude
+      
+      # NPM cache for faster installs
+      - npm-cache:/home/claude/.npm
+      
+      # SSH keys (read-only) for git operations
+      - ~/.ssh:/home/claude/.ssh:ro
+    
+    # Keep STDIN open and allocate TTY
+    stdin_open: true
+    tty: true
+    
+    # Network
+    networks:
+      - claude-network
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+        reservations:
+          cpus: '0.5'
+          memory: 1G
+
+  # Optional: PostgreSQL for development projects
+  postgres:
+    image: postgres:15-alpine
+    container_name: claude-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-claude}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-claude123}
+      POSTGRES_DB: ${POSTGRES_DB:-development}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    networks:
+      - claude-network
+    profiles:
+      - with-db
+
+  # Optional: Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: claude-redis
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-redis123}
+    volumes:
+      - redis-data:/data
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    networks:
+      - claude-network
+    profiles:
+      - with-cache
+
+  # Optional: Web interface for database management
+  adminer:
+    image: adminer:latest
+    container_name: claude-adminer
+    ports:
+      - "${ADMINER_PORT:-8080}:8080"
+    networks:
+      - claude-network
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+    profiles:
+      - with-db
+    depends_on:
+      - postgres
+
+# Named volumes for data persistence
+volumes:
+  claude-config:
+    name: claude-config
+  npm-cache:
+    name: claude-npm-cache
+  postgres-data:
+    name: claude-postgres-data
+  redis-data:
+    name: claude-redis-data
+
+# Network configuration
+networks:
+  claude-network:
+    driver: bridge
+    name: claude-network

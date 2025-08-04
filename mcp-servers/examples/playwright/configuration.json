@@ -1,0 +1,87 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "./browsers",
+        "DEFAULT_BROWSER": "chromium",
+        "HEADLESS": "true",
+        "TIMEOUT": "30000",
+        "VIEWPORT_WIDTH": "1920",
+        "VIEWPORT_HEIGHT": "1080",
+        "USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "LOCALE": "en-US",
+        "TIMEZONE": "America/New_York",
+        "DEVICE_SCALE_FACTOR": "1",
+        "IS_MOBILE": "false",
+        "HAS_TOUCH": "false",
+        "JAVASCRIPT_ENABLED": "true",
+        "IGNORE_HTTPS_ERRORS": "false",
+        "OFFLINE": "false",
+        "COLOR_SCHEME": "light",
+        "REDUCED_MOTION": "no-preference",
+        "FORCED_COLORS": "none",
+        "ACCEPT_DOWNLOADS": "true",
+        "RECORD_VIDEO": "false",
+        "RECORD_HAR": "false",
+        "HTTP_CREDENTIALS": "",
+        "PROXY_SERVER": "",
+        "BYPASS_CSP": "false",
+        "JAVA_SCRIPT_ENABLED": "true",
+        "BLOCK_RESOURCES": "",
+        "EXTRA_HTTP_HEADERS": "{}",
+        "GEOLOCATION": "",
+        "PERMISSIONS": "[]",
+        "STORAGE_STATE": ""
+      }
+    }
+  },
+  "browserProfiles": {
+    "mobile": {
+      "VIEWPORT_WIDTH": "375",
+      "VIEWPORT_HEIGHT": "667",
+      "USER_AGENT": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X)",
+      "IS_MOBILE": "true",
+      "HAS_TOUCH": "true",
+      "DEVICE_SCALE_FACTOR": "2"
+    },
+    "tablet": {
+      "VIEWPORT_WIDTH": "768",
+      "VIEWPORT_HEIGHT": "1024",
+      "USER_AGENT": "Mozilla/5.0 (iPad; CPU OS 14_7_1 like Mac OS X)",
+      "IS_MOBILE": "true",
+      "HAS_TOUCH": "true",
+      "DEVICE_SCALE_FACTOR": "2"
+    },
+    "desktop-4k": {
+      "VIEWPORT_WIDTH": "3840",
+      "VIEWPORT_HEIGHT": "2160",
+      "DEVICE_SCALE_FACTOR": "2"
+    }
+  },
+  "automationPresets": {
+    "screenshot": {
+      "fullPage": true,
+      "type": "png",
+      "quality": 90,
+      "animations": "disabled",
+      "caret": "hide",
+      "scale": "css"
+    },
+    "scraping": {
+      "waitUntil": "networkidle",
+      "timeout": 60000,
+      "retries": 3,
+      "blockResources": ["image", "media", "font"],
+      "userAgent": "Mozilla/5.0 (compatible; ClaudeBot/1.0)"
+    },
+    "testing": {
+      "video": true,
+      "trace": true,
+      "screenshot": "only-on-failure",
+      "retries": 2,
+      "timeout": 30000
+    }
+  }
+}

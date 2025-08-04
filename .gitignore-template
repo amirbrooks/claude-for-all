@@ -1,0 +1,364 @@
+# 🔐 Claude Code Hub - Security-First .gitignore Template
+# Copy this to your project root as .gitignore
+
+# ============================================================================
+# 🚨 CRITICAL: API Keys and Secrets (NEVER COMMIT THESE)
+# ============================================================================
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
+
+# Claude Code specific environment files
+.claude/.env
+.claude/.env.*
+.claude/settings.local.json
+claude-settings.json
+
+# API Keys and tokens
+*.key
+*.pem
+*.secret
+*.token
+secrets.json
+config/secrets.*
+
+# SSH keys
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# ============================================================================
+# 📁 Claude Code & MCP Specific
+# ============================================================================
+
+# Claude Code temporary files
+.claude/temp/
+.claude/cache/
+.claude/.session
+.claude/logs/
+
+# MCP server data
+mcp-servers/data/
+mcp-servers/logs/
+mcp-servers/temp/
+
+# Claude conversation exports (may contain sensitive data)
+claude-conversation-*.json
+conversation-export-*.json
+
+# ============================================================================
+# 💻 Development Environment
+# ============================================================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# ============================================================================
+# 🗂️ Operating System Files
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# 🛠️ IDE and Editor Files
+# ============================================================================
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================================================
+# 📊 Logs and Temporary Files
+# ============================================================================
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output
+
+# Temporary folders
+tmp/
+temp/
+.tmp/
+.temp/
+
+# ============================================================================
+# 🔒 Security and Sensitive Data
+# ============================================================================
+
+# Database files (may contain sensitive data)
+*.sqlite
+*.sqlite3
+*.db
+*.database
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+
+# Archive files that might contain sensitive data
+*.tar.gz
+*.zip
+*.rar
+*.7z
+secrets.tar.gz
+backup.zip
+
+# Certificate files
+*.crt
+*.csr
+*.p12
+*.pfx
+*.jks
+
+# ============================================================================
+# 🖼️ Media and Binary Files (Optional - uncomment if needed)
+# ============================================================================
+
+# Uncomment these if you want to exclude media files
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.pdf
+# *.mp4
+# *.mov
+# *.avi
+
+# ============================================================================
+# 📦 Package Manager Files
+# ============================================================================
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# pnpm
+.pnpm-debug.log*
+
+# Rush
+common/deploy/
+common/temp/
+
+# ============================================================================
+# 🧪 Testing and CI/CD
+# ============================================================================
+
+# Test results
+test-results/
+coverage/
+.nyc_output/
+junit.xml
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# ============================================================================
+# 🐳 Docker and Containerization
+# ============================================================================
+
+# Docker
+.dockerignore
+Dockerfile.local
+docker-compose.override.yml
+.docker/
+
+# Kubernetes secrets
+*-secret.yml
+*-secret.yaml
+
+# ============================================================================
+# ☁️ Cloud and Deployment
+# ============================================================================
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# AWS
+.aws/credentials
+.aws/config
+
+# Google Cloud
+gcloud-credentials.json
+service-account-key.json
+
+# Azure
+.azure/
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# ============================================================================
+# 📝 Documentation (Optional)
+# ============================================================================
+
+# Uncomment if you want to exclude generated documentation
+# docs/_build/
+# .sphinx-build/
+
+# ============================================================================
+# 🎯 Project Specific Patterns
+# ============================================================================
+
+# Add your project-specific patterns here
+# example-config.local.json
+# user-settings.json
+
+# ============================================================================
+# 📋 Template Usage Instructions
+# ============================================================================
+#
+# 1. Copy this file to your project root as .gitignore
+# 2. Customize the "Project Specific Patterns" section
+# 3. Remove or comment out sections that don't apply to your project
+# 4. Always test with: git status --ignored
+# 5. Review regularly and update as needed
+#
+# Security Reminders:
+# - Never commit API keys, tokens, or passwords
+# - Use environment variables for all secrets
+# - Regularly audit what files are being tracked
+# - When in doubt, exclude the file rather than risk exposure
+#
+# ============================================================================

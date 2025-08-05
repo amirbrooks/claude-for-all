@@ -28,7 +28,6 @@
         "HTTP_CREDENTIALS": "",
         "PROXY_SERVER": "",
         "BYPASS_CSP": "false",
-        "JAVA_SCRIPT_ENABLED": "true",
         "BLOCK_RESOURCES": "",
         "EXTRA_HTTP_HEADERS": "{}",
         "GEOLOCATION": "",

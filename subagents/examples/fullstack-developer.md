@@ -1,6 +1,5 @@
 # 🌐 Fullstack Developer Subagent
 
-```yaml
 ---
 name: fullstack-developer
 description: Complete web application development with frontend, backend, and database integration. Specializes in modern full-stack architectures and deployment.

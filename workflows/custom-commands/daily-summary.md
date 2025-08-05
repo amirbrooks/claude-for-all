@@ -1,16 +1,6 @@
 # Daily Summary Command
 
-```yaml
----
-description: "Generate comprehensive daily development summary"
-allowed-tools: ["Read", "LS", "Write", "Glob", "Grep", "Bash"]
-tags: ["daily", "productivity", "tracking"]
-version: "1.0"
-author: "claude-code-hub"
----
-```
-
-Create a comprehensive daily summary for your development workspace. This command scans your project activity and generates an organized report of your accomplishments and progress.
+Generate a comprehensive daily summary for your development workspace. This command scans your project activity and generates an organized report of your accomplishments and progress.
 
 ## What This Command Does
 

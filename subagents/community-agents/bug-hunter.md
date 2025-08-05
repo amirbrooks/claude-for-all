@@ -1,6 +1,5 @@
 # 🔍 Bug Hunter Subagent
 
-```yaml
 ---
 name: bug-hunter
 description: Advanced debugging specialist for hunting complex, hard-to-reproduce bugs. PROACTIVELY used for systematic debugging of intermittent issues, memory leaks, race conditions, and edge cases.

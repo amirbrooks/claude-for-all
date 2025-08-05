@@ -13,6 +13,10 @@ The GitHub MCP server provides Claude Code with full access to GitHub's API, ena
 - 👥 **Collaboration**: Manage teams and permissions
 - 📈 **Analytics**: Access repository insights and statistics
 
+## 🚨 Important Update
+
+**The npm package `@modelcontextprotocol/server-github` has been deprecated.** This guide now uses the official GitHub MCP Server from GitHub's official repository.
+
 ## 🚀 Quick Start
 
 ### 1. Get GitHub Token
@@ -26,7 +30,11 @@ The GitHub MCP server provides Claude Code with full access to GitHub's API, ena
    - `gist` (optional, for gists)
 4. Generate and copy token
 
-### 2. Configure Environment
+### 2. Install Docker
+
+The official GitHub MCP server runs via Docker. Install Docker from [docker.com](https://www.docker.com/get-started).
+
+### 3. Configure Environment
 
 Add to `.claude/.env`:
 ```bash

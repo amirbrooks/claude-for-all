@@ -1,0 +1,51 @@
+{
+  "name": "@claude-for-all/setup",
+  "version": "1.0.0",
+  "description": "Interactive setup wizard for Claude Code Hub - complete configuration in minutes",
+  "main": "bin/setup.js",
+  "bin": {
+    "claude-setup": "bin/setup.js"
+  },
+  "keywords": [
+    "claude-code",
+    "ai",
+    "development",
+    "automation",
+    "setup",
+    "wizard",
+    "cli"
+  ],
+  "author": "Claude for All Community",
+  "license": "MIT",
+  "homepage": "https://github.com/amirbrooks/claude-for-all",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amirbrooks/claude-for-all.git",
+    "directory": "packages/setup"
+  },
+  "bugs": {
+    "url": "https://github.com/amirbrooks/claude-for-all/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.0",
+    "chalk": "^5.3.0",
+    "ora": "^7.0.0",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "node bin/setup.js",
+    "prepublishOnly": "npm test"
+  },
+  "files": [
+    "bin/",
+    "templates/",
+    "README.md"
+  ]
+}

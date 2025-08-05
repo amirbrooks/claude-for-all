@@ -1,0 +1,49 @@
+{
+  "name": "claude-for-all",
+  "version": "1.0.0",
+  "description": "Community resources and guides for Claude Code - AI-powered development for everyone",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "npm install",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "rm -rf node_modules packages/*/node_modules",
+    "dev": "npm run dev --workspaces --if-present",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "claude-code",
+    "ai",
+    "development",
+    "automation",
+    "mcp-servers",
+    "subagents",
+    "workflow",
+    "cli",
+    "community"
+  ],
+  "author": "Claude for All Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirbrooks/claude-for-all.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amirbrooks/claude-for-all/issues"
+  },
+  "homepage": "https://github.com/amirbrooks/claude-for-all#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
+}

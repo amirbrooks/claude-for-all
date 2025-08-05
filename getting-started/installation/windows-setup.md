@@ -25,7 +25,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 choco install nodejs -y
 
 # Restart PowerShell, then install Claude Code
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version

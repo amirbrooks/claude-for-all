@@ -43,7 +43,7 @@ curl -fsSL https://rpm.nodesource.com/setup_lts.x | sudo bash -
 sudo dnf install nodejs
 
 # Install Claude Code
-sudo npm install -g @anthropic/claude-cli
+sudo npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version
@@ -56,7 +56,7 @@ claude --version
 sudo pacman -S nodejs npm
 
 # Install Claude Code
-sudo npm install -g @anthropic/claude-cli
+sudo npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version
@@ -69,7 +69,7 @@ claude --version
 sudo zypper install nodejs npm
 
 # Install Claude Code
-sudo npm install -g @anthropic/claude-cli
+sudo npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version
@@ -89,7 +89,7 @@ nvm install node
 nvm use node
 
 # Install Claude Code
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version

@@ -20,7 +20,7 @@ This guide covers installing Claude Code on macOS, including Apple Silicon (M1/M
 brew install node
 
 # Install Claude Code
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version
@@ -35,7 +35,7 @@ node --version
 # If not installed, download from https://nodejs.org/
 
 # Install Claude Code
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version

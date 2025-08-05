@@ -26,7 +26,7 @@ node --version
 npm --version
 
 # Install Claude Code
-sudo npm install -g @anthropic/claude-cli
+sudo npm install -g @anthropic-ai/claude-code
 
 # Verify installation
 claude --version
@@ -322,7 +322,7 @@ echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 
 # Reinstall Claude Code
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 ```
 
 ### Issue: Node.js Version Too Old
@@ -401,7 +401,7 @@ claude() {
 ```bash
 # Use pnpm for faster installs
 npm install -g pnpm
-pnpm add -g @anthropic/claude-cli
+pnpm add -g @anthropic-ai/claude-code
 ```
 
 ### 2. Cache Configuration

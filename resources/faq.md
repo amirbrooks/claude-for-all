@@ -9,7 +9,7 @@ Claude Code is Anthropic's official CLI tool that brings Claude's AI capabilitie
 
 ### How do I install Claude Code?
 Installation varies by platform:
-- **macOS/Linux**: `npm install -g @anthropic/claude-cli`
+- **macOS/Linux**: `npm install -g @anthropic-ai/claude-code`
 - **Windows**: Download from the official website or use npm
 - **Alternative**: Use the desktop application for a GUI experience
 

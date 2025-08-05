@@ -24,7 +24,7 @@ Before installing Claude Code, ensure you have:
 
 ```bash
 # Install Claude Code globally
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # Set your API key
 export ANTHROPIC_API_KEY="sk-ant-api03-..."  # Linux/macOS

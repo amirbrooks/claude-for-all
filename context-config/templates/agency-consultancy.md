@@ -156,7 +156,7 @@ git clone <repository-url>
 cd agency-workspace
 
 # 2. Install Claude Code CLI
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # 3. Configure environment
 cp .claude/.env.example .claude/.env

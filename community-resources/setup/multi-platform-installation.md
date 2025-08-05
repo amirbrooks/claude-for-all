@@ -54,7 +54,7 @@ mkdir -p ~/Documents/AI-Memory-System/{.claude/{commands,agents},terminal/{scrip
 
 # 2. Install Claude Code
 echo "🤖 Installing Claude Code..."
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # 3. Configure environment
 echo "⚙️ Setting up environment..."
@@ -188,7 +188,7 @@ New-Item -ItemType Directory -Force -Path "$WorkspaceRoot\terminal\aliases"
 
 # 2. Install Claude Code
 Write-Host "🤖 Installing Claude Code..." -ForegroundColor Yellow
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # 3. Configure environment
 Write-Host "⚙️ Setting up environment..." -ForegroundColor Yellow
@@ -318,7 +318,7 @@ mkdir -p ~/AI-Memory-System/{.claude/{commands,agents},terminal/{scripts,mcp-ser
 
 # 2. Install Claude Code
 echo "🤖 Installing Claude Code..."
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # 3. Configure environment
 echo "⚙️ Setting up environment..."
@@ -673,7 +673,7 @@ check-mcp                      # Test MCP server connections
 ```bash
 # Problem: "claude command not found"
 # Solution: Ensure Claude Code is installed and in PATH
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 # Restart terminal or reload shell profile
 ```
 

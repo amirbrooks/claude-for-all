@@ -78,7 +78,7 @@ node --version
 npm --version
 
 # Install Claude Code
-sudo npm install -g @anthropic/claude-cli
+sudo npm install -g @anthropic-ai/claude-code
 
 # Verify Claude installation
 claude --version
@@ -98,7 +98,7 @@ nvm install --lts
 nvm use --lts
 
 # Install Claude Code
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 ```
 
 ## 🔑 API Key Configuration

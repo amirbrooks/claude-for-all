@@ -56,7 +56,7 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 scoop install nodejs
 
 # Install Claude Code
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 ```
 
 ## 🔑 API Key Configuration
@@ -253,11 +253,11 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 **Solution:**
 ```powershell
 # Run as Administrator or use --force
-npm install -g @anthropic/claude-cli --force
+npm install -g @anthropic-ai/claude-code --force
 
 # Alternative: Install to user directory
 npm config set prefix "$env:USERPROFILE\.npm"
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 # Add $env:USERPROFILE\.npm to PATH
 ```
 

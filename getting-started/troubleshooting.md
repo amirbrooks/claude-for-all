@@ -30,13 +30,13 @@ echo "==============================="
 
 1. **Check if installed:**
    ```bash
-   npm list -g @anthropic/claude-cli
+   npm list -g @anthropic-ai/claude-code
    ```
 
 2. **Reinstall:**
    ```bash
-   npm uninstall -g @anthropic/claude-cli
-   npm install -g @anthropic/claude-cli
+   npm uninstall -g @anthropic-ai/claude-code
+   npm install -g @anthropic-ai/claude-code
    ```
 
 3. **Fix PATH:**
@@ -64,7 +64,7 @@ echo "==============================="
    npm config set prefix '~/.npm-global'
    echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
    source ~/.bashrc
-   npm install -g @anthropic/claude-cli
+   npm install -g @anthropic-ai/claude-code
    ```
 
 2. **Fix permissions:**
@@ -74,7 +74,7 @@ echo "==============================="
 
 3. **Use npx (no install):**
    ```bash
-   npx @anthropic/claude-cli
+   npx @anthropic-ai/claude-code
    ```
 
 ### "Cannot find module"
@@ -87,10 +87,10 @@ echo "==============================="
 npm cache clean --force
 
 # Remove node_modules globally
-rm -rf $(npm config get prefix)/lib/node_modules/@anthropic/claude-cli
+rm -rf $(npm config get prefix)/lib/node_modules/@anthropic-ai/claude-code
 
 # Reinstall
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 ```
 
 ## 🔑 API Key Issues
@@ -483,7 +483,7 @@ When reporting issues, include:
 cp -r ~/.claude ~/.claude.backup
 
 # Remove Claude Code
-npm uninstall -g @anthropic/claude-cli
+npm uninstall -g @anthropic-ai/claude-code
 
 # Clear cache
 rm -rf ~/.claude/cache
@@ -493,7 +493,7 @@ rm -rf ~/.claude/sessions
 npm cache clean --force
 
 # Reinstall
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 ```
 
 ### Cache Cleanup
@@ -513,7 +513,7 @@ npm cache clean --force
 
 1. **Keep Updated:**
    ```bash
-   npm update -g @anthropic/claude-cli
+   npm update -g @anthropic-ai/claude-code
    ```
 
 2. **Regular Backups:**
@@ -531,7 +531,7 @@ npm cache clean --force
 4. **Test Changes:**
    ```bash
    # Test in isolated environment
-   npm install @anthropic/claude-cli --dry-run
+   npm install @anthropic-ai/claude-code --dry-run
    ```
 
 ---

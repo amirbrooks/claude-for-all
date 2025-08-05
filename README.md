@@ -22,7 +22,7 @@ Claude Code is Anthropic's official CLI tool that brings Claude's AI capabilitie
 
 ```bash
 # Install Claude Code (macOS/Linux)
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 
 # Configure API key
 export ANTHROPIC_API_KEY="your-api-key"
@@ -136,7 +136,7 @@ You are a senior fullstack developer who coordinates with specialized subagents.
 ### 🐳 Docker Deployment
 ```dockerfile
 FROM node:20-slim
-RUN npm install -g @anthropic/claude-cli
+RUN npm install -g @anthropic-ai/claude-code
 WORKDIR /workspace
 COPY .claude/ .claude/
 ENV ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}

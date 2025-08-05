@@ -64,7 +64,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Install Claude Code globally
-RUN npm install -g @anthropic/claude-cli
+RUN npm install -g @anthropic-ai/claude-code
 
 # Create a non-root user
 RUN useradd -m -s /bin/bash claude
@@ -130,7 +130,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install global npm packages
 RUN npm install -g \
-    @anthropic/claude-cli \
+    @anthropic-ai/claude-code \
     nodemon \
     typescript \
     ts-node \
@@ -177,13 +177,13 @@ CMD ["tail", "-f", "/dev/null"]
 FROM node:20-alpine AS builder
 
 WORKDIR /build
-RUN npm install -g @anthropic/claude-cli
+RUN npm install -g @anthropic-ai/claude-code
 
 # Stage 2: Runtime
 FROM node:20-alpine
 
 # Copy only necessary files
-COPY --from=builder /usr/local/lib/node_modules/@anthropic/claude-cli /usr/local/lib/node_modules/@anthropic/claude-cli
+COPY --from=builder /usr/local/lib/node_modules/@anthropic-ai/claude-code /usr/local/lib/node_modules/@anthropic-ai/claude-code
 COPY --from=builder /usr/local/bin/claude /usr/local/bin/claude
 
 # Minimal runtime dependencies
@@ -517,7 +517,7 @@ FROM node:20-alpine AS production
 RUN apk update && apk upgrade
 
 # Install Claude Code
-RUN npm install -g @anthropic/claude-cli
+RUN npm install -g @anthropic-ai/claude-code
 
 # Security hardening
 RUN adduser -D -s /bin/nologin claude

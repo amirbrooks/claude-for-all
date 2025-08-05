@@ -19,7 +19,7 @@ RUN addgroup -g 1001 -S claude && \
     adduser -S -u 1001 -G claude claude
 
 # Install Claude Code globally as root
-RUN npm install -g @anthropic/claude-cli
+RUN npm install -g @anthropic-ai/claude-code
 
 # Switch to non-root user
 USER claude

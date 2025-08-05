@@ -55,7 +55,7 @@ nvm install node
 nvm use node
 
 # Install Claude Code
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 ```
 
 ## 🔑 API Key Configuration
@@ -198,7 +198,7 @@ source ~/.zshrc
 sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
 # Reinstall
-npm install -g @anthropic/claude-cli
+npm install -g @anthropic-ai/claude-code
 ```
 
 ### Issue: Apple Silicon Compatibility
@@ -209,7 +209,7 @@ npm install -g @anthropic/claude-cli
 softwareupdate --install-rosetta
 
 # Use native Node.js build
-arch -arm64 npm install -g @anthropic/claude-cli
+arch -arm64 npm install -g @anthropic-ai/claude-code
 ```
 
 ## 🔐 Security Best Practices

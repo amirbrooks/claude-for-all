@@ -50,8 +50,8 @@ Update `.claude/settings.json`:
 {
   "mcpServers": {
     "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "ghcr.io/github/github-mcp-server:latest"],
       "env": {
         "GITHUB_TOKEN": "$GITHUB_TOKEN"
       }
@@ -78,8 +78,8 @@ claude "Create a new issue in myrepo with title 'Test Issue'"
 {
   "mcpServers": {
     "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "ghcr.io/github/github-mcp-server:latest"],
       "env": {
         "GITHUB_TOKEN": "$GITHUB_TOKEN"
       }
@@ -94,8 +94,8 @@ claude "Create a new issue in myrepo with title 'Test Issue'"
 {
   "mcpServers": {
     "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "ghcr.io/github/github-mcp-server:latest"],
       "env": {
         "GITHUB_TOKEN": "$GITHUB_TOKEN",
         "GITHUB_API_URL": "https://api.github.com",  // Or GitHub Enterprise URL
